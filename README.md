@@ -114,10 +114,6 @@ mark.z@corp.net,Mark,Zhang
 - GUI may freeze during large campaigns (normal behavior)
 - Fix glitches by restarting Python environment
 ```
-**No email server installation required!** The tool uses **Gmail's SMTP service** through your existing Google account. Here's the key breakdown:
-
----
-
 ### 📧 Email Infrastructure Setup
 1. **You Need**  
    ✅ **Any Gmail Account** (not necessarily the target's)  
