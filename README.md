@@ -81,8 +81,8 @@ python app.py
 ---
 
 ## 📁 Target CSV Format
+email,first_name,last_name ( No header Required)
 ```csv
-email,first_name,last_name
 john.doe@company.com,John,Doe
 sarah.smith@example.com,Sarah,Smith 
 mark.z@corp.net,Mark,Zhang
