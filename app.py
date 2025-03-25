@@ -87,7 +87,7 @@ create_tables()
 class PhishSimApp(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("JingPhish v2.3")
+        self.title("PhishGuardian v2.3")
         self.geometry("1200x800")
         self.current_campaign = None
         self.ai_model = None
