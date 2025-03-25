@@ -34,7 +34,11 @@
 ```bash
 # Install Python 3.10+ then:
 pip install google-generativeai pyngrok requests tkinter
+
+# To run the app simply:
+python app.py
 ```
+
 
 ### **API Keys Setup**
 1. **Google AI Studio**  
