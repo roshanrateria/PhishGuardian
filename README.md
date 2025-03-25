@@ -110,6 +110,37 @@ mark.z@corp.net,Mark,Zhang
 - GUI may freeze during large campaigns (normal behavior)
 - Fix glitches by restarting Python environment
 ```
+**No email server installation required!** The tool uses **Gmail's SMTP service** through your existing Google account. Here's the key breakdown:
+
+---
+
+### 📧 Email Infrastructure Setup
+1. **You Need**  
+   ✅ **Any Gmail Account** (not necessarily the target's)  
+   ✅ **Gmail App Password** (as shown in previous setup)  
+
+2. **You *Don't* Need**  
+   ❌ Local mail servers (Postfix/Sendmail/etc)  
+   ❌ Separate email hosting  
+   ❌ MX record configuration  
+
+---
+
+### Why Gmail SMTP?
+- Built-in SSL encryption via `smtplib`  
+- Avoids spam filters (when used responsibly)  
+- Handles email routing automatically  
+- Free tier allows ~100 emails/day  
+
+---
+
+### ⚠️ Important Notes
+1. **Daily Limits**  
+   Google blocks bulk sends - stay under 100 emails/day  
+2. **Sender Reputation**  
+   Use a **dedicated Gmail account** (not your primary email)  
+3. **App Password Requirement**  
+   Standard Gmail passwords won't work - must use [app password](https://myaccount.google.com/apppasswords)  
 
 ---
 
